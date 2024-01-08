@@ -1,19 +1,12 @@
-import java.util.Scanner;
-
 public class Q14 {
     public static void main(String[] args) {
-        System.out.println("Enter the number:");
-        Scanner input = new Scanner(System.in);
-        int n =input.nextInt();
-        int result = sumOfSquares(n);
-        System.out.println(result);
-    }
+        int[] arr = {1, 2, 3, 4, 5};
+        int index = -1;
 
-    public static int sumOfSquares(int n) {
-        int sum = 0;
-        for (int i = 1; i <= n; i++) {
-            sum += i * i;
+        try {
+            System.out.println(arr[index]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Don't try buffer overflow attacks in Java!");
         }
-        return sum;
     }
 }
